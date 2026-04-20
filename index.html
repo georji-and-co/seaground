@@ -215,17 +215,37 @@
   }
 
   .entrance-headline {
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 200;
-    font-size: clamp(48px, 6vw, 88px);
-    line-height: 1.15;
-    letter-spacing: -0.01em;
     margin-bottom: 40px;
     opacity: 0;
   }
-  .entrance-headline em {
-    font-style: normal;
+  .entrance-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(80px, 12vw, 168px);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: var(--off-white);
+    display: block;
+  }
+  .entrance-brand-sub {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 200;
+    font-size: clamp(16px, 2vw, 26px);
+    letter-spacing: 0.4em;
     color: var(--concrete-light);
+    display: block;
+    margin-top: 20px;
+    padding-left: 2px;
+  }
+  .entrance-brand-sub::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--brass);
+    vertical-align: middle;
+    margin-right: 16px;
+    margin-bottom: 3px;
   }
 
   .entrance-sub {
@@ -984,10 +1004,10 @@
   <div class="entrance-year">2026</div>
 
   <div class="entrance-content">
-    <div class="entrance-eyebrow" id="ey">株式会社 Sea Ground</div>
+
     <h1 class="entrance-headline" id="eh">
-      土地に、<em>記憶を</em><br>
-      刻む仕事。
+      <span class="entrance-brand">Sea Ground</span>
+      <span class="entrance-brand-sub">記憶を刻む</span>
     </h1>
     <p class="entrance-sub" id="es">
       潮の香りと、大地の重さを知る者だけが<br>
@@ -1196,12 +1216,10 @@
   <div class="contact-inner">
     <div class="contact-eyebrow reveal">Get in Touch</div>
     <h2 class="contact-title reveal">
-      あなたの「場所」の物語を、<br>
-      私たちに聞かせてください。
+      あなたが思い描く空間を、<br>私たちに聞かせてください。
     </h2>
     <p class="contact-sub reveal">
-      ご相談・お見積りはすべて無料です。<br>
-      まず、あなたが思い描く空間を、言葉でお教えください。
+      ご相談・お見積りはすべて無料です。まず、言葉でお教えいただくだけで構いません。
     </p>
 
     <form onsubmit="return false;">
@@ -1307,10 +1325,9 @@ window.addEventListener('load', () => {
     });
   };
   setTimeout(() => {
-    tl(document.getElementById('ey'),   0.3, 0.8);
-    tl(document.getElementById('eh'),   0.7, 1.0);
-    tl(document.getElementById('es'),   1.2, 0.9);
-    tl(document.getElementById('escroll'), 1.8, 0.8);
+    tl(document.getElementById('eh'),   0.3, 1.0);
+    tl(document.getElementById('es'),   0.9, 0.9);
+    tl(document.getElementById('escroll'), 1.5, 0.8);
   }, 200);
 });
 
